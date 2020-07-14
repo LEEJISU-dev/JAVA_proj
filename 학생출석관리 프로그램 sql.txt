@@ -1,0 +1,67 @@
+SHOW DATABASES;
+CREATE DATABASE proj;
+USE proj;
+
+CREATE TABLE admin(
+id VARCHAR(20),
+pass VARCHAR(20)
+);
+
+DESC admin;
+
+INSERT INTO admin VALUES('admin','1234');
+
+CREATE TABLE stu(
+num INT PRIMARY KEY AUTO_INCREMENT,
+NAME VARCHAR(20),
+jumin VARCHAR(20),
+sex CHAR(2),
+jp VARCHAR(10),
+it VARCHAR(10),
+phone VARCHAR(20),
+NO CHAR(5)
+);
+
+DROP TABLE stu;
+DESC stu;
+SELECT * FROM stu;
+
+CREATE TABLE 26jp(
+DATE DATE,
+num INT,
+jp_att VARCHAR(10)
+);
+
+CREATE TABLE 26it(
+DATE DATE,
+num INT,
+it_att VARCHAR(10)
+);
+
+CREATE TABLE 27jp(
+DATE DATE,
+num INT,
+jp_att VARCHAR(10)
+);
+
+SELECT * FROM 27jp;
+DELETE FROM 27jp;
+
+CREATE TABLE 27it(
+DATE DATE,
+num INT,
+it_att VARCHAR(10)
+);
+
+SELECT 27jp.date,stu.no,stu.num, stu.name,  stu.jp,27jp.jp_att 
+FROM stu, 27jp 
+WHERE stu.num = 27jp.num AND stu.no = 27;
+
+INSERT 27jp(num)
+SELECT num
+FROM stu;
+
+SELECT 27jp.date,stu.no,stu.num, stu.name, stu.jp,27jp.jp_att 
+FROM stu JOIN 27jp 
+ON stu.num = 27jp.num
+WHERE DATE ='2017-12-24'AND 27jp.num = '2';
