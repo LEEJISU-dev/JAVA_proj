@@ -11,13 +11,6 @@ JSL 개인 프로젝트
 - Java
 - MySQL / Windows
 
-### 작업 내용
-- <p>학생 관리 : 기본적인 등록, 검색, 수정, 삭제 기능 구현</p>
-![image](https://user-images.githubusercontent.com/67365433/87517148-74db4d00-c6b9-11ea-9392-8b04806b383e.png)
-
-- <p>출석 관리 : 학생 테이블과 조인을 이용해 구현</p>
-![image](https://user-images.githubusercontent.com/67365433/87517212-845a9600-c6b9-11ea-84f0-fabfd8747751.png)
-
 ### 주요 기능
 #### 1. 학생 관리
 * 기본적인 등록 / 검색 / 수정 / 삭제를 구현
@@ -26,7 +19,8 @@ JSL 개인 프로젝트
 | 번호 | 이름 | 주민번호 | 성별 | 일본어반 | IT반 | 전화번호 | 기수 | 
 |:--------:|:-------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
 | INT(PRIMARY KEY) | VARCHAR(20) | VARCHAR(20)| CHAR(2) | VARCHAR(10) | VARCHAR(10) | VARCHAR(20) | CHAR(5) |
-|----
+
+![image](https://user-images.githubusercontent.com/67365433/87517148-74db4d00-c6b9-11ea-9392-8b04806b383e.png)
 
 #### 2. 출석 관리
 
@@ -38,8 +32,8 @@ JSL 개인 프로젝트
 | 날짜 | 번호 | 출석여부 | 
 |:--------:|:-------:|:--------:|
 | DATE | INT | VARCHAR(10)|
-|----
 
+![image](https://user-images.githubusercontent.com/67365433/87517212-845a9600-c6b9-11ea-84f0-fabfd8747751.png)
 
 ### 보완점
-- 테이블 요소에 JComboBox를 삽입햇지만 맨 처음 값만 받는 오류가 
+- 테이블 요소에 JComboBox를 삽입햇지만 맨 처음 값만 받는 오류가 있음.
